@@ -59,27 +59,43 @@ npm run dev
 
 ## 📚 API Documentation
 
-### Authentication
+The API is fully documented using OpenAPI (Swagger) specification. You can access the interactive API documentation at:
 
-- POST `/api/v1/auth/register` - Register new user
+```
+http://localhost:3000/api/v1/docs
+```
+
+The Swagger UI provides:
+
+- Interactive API testing interface
+- Detailed request/response schemas
+- Authentication requirements
+- Role-based access control information
+- Example requests and responses
+
+### API Endpoints Overview
+
+#### Authentication
+
+- POST `/api/v1/auth/register` - Register new user (Normal/TeamLead)
 - POST `/api/v1/auth/login` - User login
 
-### User
+#### User Management
 
-- GET `/api/v1/user/profile` - Get user profile
-- PUT `/api/v1/user/profile` - Update user profile
+- GET `/api/v1/users/profile` - Get user profile
+- PUT `/api/v1/users/profile` - Update user profile and avatar
 
-### Team
+#### Team Management
 
-- POST `/api/v1/team` - Create new team
-- GET `/api/v1/team` - List teams
-- PUT `/api/v1/team/:id` - Update team
+- POST `/api/v1/teams` - Create new team (TeamLead only)
+- POST `/api/v1/teams/invite` - Invite member to team (TeamLead only)
+- POST `/api/v1/teams/assign-role` - Assign team member role (TeamLead only)
 
-### Task
+#### Task Management
 
-- POST `/api/v1/task` - Create new task
-- GET `/api/v1/task` - List tasks
-- PUT `/api/v1/task/:id` - Update task status
+- POST `/api/v1/tasks` - Create new task (TeamLead only)
+- PUT `/api/v1/tasks/status` - Update task status (Task assignee)
+- POST `/api/v1/tasks/assign` - Assign task to team member (TeamLead only)
 
 ## 🏗️ Project Structure
 
@@ -95,6 +111,16 @@ skill-sync/
 │   │   ├── taskController.js     # Task management
 │   │   ├── teamController.js     # Team operations
 │   │   └── userController.js     # User management
+│   │
+│   ├── docs/                     # API Documentation
+│   │   ├── swagger.js           # Swagger configuration
+│   │   └── components/          # Swagger documentation components
+│   │       ├── auth.js         # Authentication endpoints docs
+│   │       ├── schemas.js      # Data models documentation
+│   │       ├── responses.js    # Common responses
+│   │       ├── tasks.js       # Task endpoints docs
+│   │       ├── teams.js       # Team endpoints docs
+│   │       └── users.js       # User endpoints docs
 │   │
 │   ├── middleware/               # Custom middleware
 │   │   ├── authMiddleware.js     # JWT verification
@@ -140,7 +166,7 @@ skill-sync/
 │
 ├── package.json                 # Project dependencies
 ├── .env                         # Environment variables
-├── package-lock.json            # 
+├── package-lock.json            #
 ├── .gitignore                   # Ignore the files from git
 └── README.md                    # Project documentation
 ```

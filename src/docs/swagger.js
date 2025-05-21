@@ -50,7 +50,7 @@ const specs = swaggerJsdoc(options);
 
 export const swaggerDocs = (app, port) => {
   // Swagger Page
-  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+  app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(specs));
 
   // Docs in JSON format
   app.get("/api-docs.json", (req, res) => {
@@ -58,5 +58,5 @@ export const swaggerDocs = (app, port) => {
     res.send(specs);
   });
 
-  console.log(`📚 Swagger docs available at http://localhost:${port}/api-docs`);
+  console.log(`📚 Swagger docs available at http://localhost:${port}/api/v1/docs`);
 };
