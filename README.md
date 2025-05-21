@@ -138,9 +138,10 @@ skill-sync/
 │   ├── error.log                # Error logs
 │   └── combined.log             # All logs
 │
-├── package.json                  # Project dependencies
+├── package.json                 # Project dependencies
 ├── .env                         # Environment variables
-├── .env.example                 # Environment template
+├── package-lock.json            # 
+├── .gitignore                   # Ignore the files from git
 └── README.md                    # Project documentation
 ```
 
