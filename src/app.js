@@ -6,6 +6,7 @@ import { errorMiddleware } from "./middleware/errorMiddleware.js";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import cors from "cors";
+import { swaggerDocs } from "./docs/swagger.js";
 
 configDotenv();
 export const app = express();
@@ -27,3 +28,7 @@ app.use(json());
 app.use("/uploads", express.static("uploads")); // Serve uploaded files
 app.use("/api/v1", route);
 app.use(errorMiddleware);
+
+// Initialize Swagger documentation
+const PORT = process.env.PORT || 3000;
+swaggerDocs(app, PORT);

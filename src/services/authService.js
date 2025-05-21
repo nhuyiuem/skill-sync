@@ -3,16 +3,17 @@ import { User } from "../models/userModel.js";
 
 import { auth } from "../config/auth.js";
 
-export const registerUser = async ({ email, password, role }) => {
+export const registerUser = async ({ username, email, password, role }) => {
   const existingUser = await User.findOne({ email });
   if (existingUser) {
     throw new Error("Email already exists");
   }
 
   const user = new User({
+    username,
     email,
     password,
-    role: role || "Normal",
+    role: "TeamLead" || "Normal",
   });
   await user.save();
 
@@ -20,7 +21,16 @@ export const registerUser = async ({ email, password, role }) => {
     expiresIn: auth.jwtExpiresIn,
   });
 
-  return { token, user: { id: user._id, email: user.email, role: user.role } };
+  return {
+    token,
+    user: {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      password: user.password,
+      role: user.role,
+    },
+  };
 };
 
 export const loginUser = async ({ email, password }) => {
@@ -38,5 +48,12 @@ export const loginUser = async ({ email, password }) => {
     expiresIn: auth.jwtExpiresIn,
   });
 
-  return { token, user: { id: user._id, email: user.email, role: user.role } };
+  return {
+    token,
+    user: {
+      id: user._id,
+      email: user.email,
+      role: user.role,
+    },
+  };
 };

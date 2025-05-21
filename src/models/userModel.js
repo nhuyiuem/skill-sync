@@ -4,11 +4,12 @@ import bcrypt from "bcryptjs";
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  username: { type: String, require: true }, // updated
   bio: String,
   avatar: String,
   skills: [{ type: String }],
   role: { type: String, enum: ["Normal", "TeamLead"], default: "Normal" },
-  teams: [{ type: mongoose.Schema.Types.ObjectId, ref: "Team" }], // updated
+  teams: [{ type: mongoose.Schema.Types.ObjectId, ref: "Team" }],
 });
 
 // Hash password before saving

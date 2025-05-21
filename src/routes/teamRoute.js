@@ -17,7 +17,7 @@ import { Router } from "express";
 export const teamRoute = Router();
 
 teamRoute.post(
-  "/",
+  "/create",
   [authMiddleware, roleMiddleware, validate(createTeamSchema)],
   createTeam
 );
