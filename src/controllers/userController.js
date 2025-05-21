@@ -1,15 +1,14 @@
 import { User } from "../models/userModel.js";
-
 export const updateProfile = async (req, res) => {
   try {
-    const { bio } = req.body;
+    const { bio, skills } = req.body;
     const user = await User.findByIdAndUpdate(
       req.user.id,
-      { bio, avatar: req.file?.path },
+      { bio, skills, avatar: req.file?.path },
       { new: true }
     );
     if (!user) return res.status(404).json({ message: "User not found" });
-    res.json({ email: user.email, bio: user.bio, avatar: user.avatar });
+    res.json(user);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

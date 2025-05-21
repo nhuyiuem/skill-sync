@@ -18,7 +18,7 @@ userSchema.pre("save", async function (next) {
     this.password = await bcrypt.hash(this.password, 10);
     next();
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    next(error); // Pass error to express error handler
   }
 });
 

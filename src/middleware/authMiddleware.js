@@ -1,6 +1,5 @@
-
 import jwt from "jsonwebtoken";
-import { auth } from "../config/auth";
+import { auth } from "../config/auth.js";
 
 export const authMiddleware = (req, res, next) => {
   const token = req.header("Authorization")?.replace("Bearer ", "");
