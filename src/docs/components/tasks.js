@@ -1,6 +1,6 @@
 /**
  * @openapi
- * /api/v1/tasks:
+ * /api/v1/task/create:
  *   post:
  *     tags: [Tasks]
  *     summary: Create a new task
@@ -52,7 +52,7 @@
  *       403:
  *         description: User must be a TeamLead to create tasks
  *
- * /api/v1/tasks/status:
+ * /api/v1/task/status:
  *   put:
  *     tags: [Tasks]
  *     summary: Update task status
@@ -89,7 +89,7 @@
  *       404:
  *         $ref: '#/components/responses/NotFoundError'
  *
- * /api/v1/tasks/assign:
+ * /api/v1/task/assign:
  *   post:
  *     tags: [Tasks]
  *     summary: Assign task to user

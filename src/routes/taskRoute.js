@@ -16,7 +16,7 @@ import {
 export const taskRoute = Router();
 
 taskRoute.post(
-  "/",
+  "/create",
   [authMiddleware, roleMiddleware, validate(createTaskSchema)],
   createTask
 );

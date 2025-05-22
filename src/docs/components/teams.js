@@ -1,6 +1,6 @@
 /**
  * @openapi
- * /api/v1/teams:
+ * /api/v1/team/create:
  *   post:
  *     tags: [Teams]
  *     summary: Create a new team
@@ -36,7 +36,7 @@
  *       403:
  *         description: User must be a TeamLead to create a team
  *
- * /api/v1/teams/invite:
+ * /api/v1/team/invite:
  *   post:
  *     tags: [Teams]
  *     summary: Invite member to team
@@ -76,7 +76,7 @@
  *       404:
  *         description: Team not found or user not found
  *
- * /api/v1/teams/assign-role:
+ * /api/v1/team/assign-role:
  *   post:
  *     tags: [Teams]
  *     summary: Assign role to team member
