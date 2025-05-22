@@ -8,7 +8,7 @@ import { updateProfileSchema } from "../schemas/userSchema.js";
 export const userRoute = Router();
 
 userRoute.get("/profile", authMiddleware, getProfile);
-userRoute.put(
+userRoute.patch(
   "/profile",
   [authMiddleware, upload.single("avatar"), validate(updateProfileSchema)],
   updateProfile
